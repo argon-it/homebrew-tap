@@ -5,21 +5,21 @@
 class Seedfast < Formula
   desc "AI-powered PostgreSQL database seeding tool"
   homepage "https://seedfa.st"
-  version "1.0.9"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.0.9/seedfast-cli_Darwin_x86_64.tar.gz"
-      sha256 "db47f926fe04c094f60f9908a62d71a08571f683ed242bd03f4d5abc9ea0810e"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.1.0/seedfast-cli_Darwin_x86_64.tar.gz"
+      sha256 "3daa05100a64cc2a8aab08008293716fd4c02d3c4dc16f44d6d23e8b640dfbea"
 
       def install
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.0.9/seedfast-cli_Darwin_arm64.tar.gz"
-      sha256 "1df6bce3b573165b2520e5ef528d5f44e24db2603a50e44e88a0ed120995cccb"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.1.0/seedfast-cli_Darwin_arm64.tar.gz"
+      sha256 "44c067a124401824c6a2b603d60dd9bda19509e1fbe3790d710bf31b73f63dce"
 
       def install
         bin.install "seedfast"
@@ -29,15 +29,15 @@ class Seedfast < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.0.9/seedfast-cli_Linux_x86_64.tar.gz"
-      sha256 "24cbe303869acd4066a4df8da76a3b9e8b15c1cf44e8c394209947e0258d27a8"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.1.0/seedfast-cli_Linux_x86_64.tar.gz"
+      sha256 "03b5472745353f76def758a19a37d36e22a378d079646dd444d2f17013e9b429"
       def install
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.0.9/seedfast-cli_Linux_arm64.tar.gz"
-      sha256 "c3a3e64e0ae94deb2bb74085729a18bb3cc7c86cd62f263cf9eec6d11b0b19f4"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v1.1.0/seedfast-cli_Linux_arm64.tar.gz"
+      sha256 "26ce2a05e1ab64155ae6901906dcffa7051b9277f054522d6cf0b8cc6257a30e"
       def install
         bin.install "seedfast"
       end
