@@ -11,7 +11,7 @@ class Seedfast < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/argon-it/seedfast-cli/releases/download/v1.23.3/seedfast_Darwin_x86_64.tar.gz"
-      sha256 "6e22b9bab2f41b345e9119b9fb80e4b3cb742a4b7bcfa929e60e8a841dd7f772"
+      sha256 "7890f9b8da5da6684ff5595f48319217396184d16d73122e413e9e68ce6e6bd8"
 
       def install
         bin.install "seedfast"
@@ -19,7 +19,7 @@ class Seedfast < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/argon-it/seedfast-cli/releases/download/v1.23.3/seedfast_Darwin_arm64.tar.gz"
-      sha256 "1e88eacd1246ec3d117b3b8d6597c726a2b7ff1a172895b460609fa26cbd6f1f"
+      sha256 "04d6dcf075c59ea8e567d97cc2eb10d9c12d87ed1582705a0693b90e7df4db29"
 
       def install
         bin.install "seedfast"
@@ -30,14 +30,14 @@ class Seedfast < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/argon-it/seedfast-cli/releases/download/v1.23.3/seedfast_Linux_x86_64.tar.gz"
-      sha256 "d9cd8c2293c4bc49c4ae9a995c611670df6244d81248e450bf8919179485170e"
+      sha256 "a5454949cd97148f883fc3005c23bf64dbe4ce49b8a05123f1b18164e7e9ad91"
       def install
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/argon-it/seedfast-cli/releases/download/v1.23.3/seedfast_Linux_arm64.tar.gz"
-      sha256 "12bb7386c9bb2ac5ccf467d4211ec8e193419edcb190ce12c609d9d5dc13302a"
+      sha256 "f4d98358184b5aa0c6dfcac712e3e009cf08549b10cb915b26c87bac3cba1c8b"
       def install
         bin.install "seedfast"
       end
