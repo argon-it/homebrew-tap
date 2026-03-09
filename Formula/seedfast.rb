@@ -5,23 +5,23 @@
 class Seedfast < Formula
   desc "AI-powered PostgreSQL database seeding tool"
   homepage "https://seedfa.st"
-  version "2.0.0"
+  version "2.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.0.0/seedfast_Darwin_x86_64.tar.gz"
-      sha256 "3da55c91dc47c6e243f878dea812d92033e2b3b4833c411a3e18f8876aaf2c34"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.1.0/seedfast_Darwin_x86_64.tar.gz"
+      sha256 "a895769eb17c1549d797dbcd05a422f8ca0b14dead0213acf202385d89bc0be5"
 
-      def install
+      define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.0.0/seedfast_Darwin_arm64.tar.gz"
-      sha256 "ceba3236c45f613642c15577191863b8cbfb13e1e6facc50af66db82f50c6429"
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.1.0/seedfast_Darwin_arm64.tar.gz"
+      sha256 "3137c8b8a3f19d36e2a4cb5c7b6fb68ce99e8536415946e40e440cbc83119bc5"
 
-      def install
+      define_method(:install) do
         bin.install "seedfast"
       end
     end
@@ -29,16 +29,16 @@ class Seedfast < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.0.0/seedfast_Linux_x86_64.tar.gz"
-      sha256 "98aa1bed4856ffe8b108d6df596928d13430313614110944f1cfb8b75fefdf22"
-      def install
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.1.0/seedfast_Linux_x86_64.tar.gz"
+      sha256 "eae925dadd01a243c777476a0178a16120d5ae93f319d6022c56d263abad2a9a"
+      define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.0.0/seedfast_Linux_arm64.tar.gz"
-      sha256 "055514782d51c318a1ab442dc59423559b01c166e587e21aba322827aa0513f2"
-      def install
+      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.1.0/seedfast_Linux_arm64.tar.gz"
+      sha256 "e6bfef67090b52dc31124a7855d5f36a32afdec9c104cd25d2e67ff011cca3dc"
+      define_method(:install) do
         bin.install "seedfast"
       end
     end
