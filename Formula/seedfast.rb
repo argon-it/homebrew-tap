@@ -5,21 +5,21 @@
 class Seedfast < Formula
   desc "AI-powered PostgreSQL database seeding tool"
   homepage "https://seedfa.st"
-  version "2.3.0"
+  version "2.3.1-rc1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.3.0/seedfast_Darwin_x86_64.tar.gz"
-      sha256 "865754f2cec434236de08431ad115d2dffc6392db6d2bf15f16492e3099f42a2"
+      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_x86_64.tar.gz"
+      sha256 "f91295aed7bd8a4373993cf686e437545a90bbe99aa3fa2af0e68a530c8a06e6"
 
       define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.3.0/seedfast_Darwin_arm64.tar.gz"
-      sha256 "c103683073e245dfd4ebd0b9f619fad982ce574c96859145f132e378aa5bb5f7"
+      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_arm64.tar.gz"
+      sha256 "ad22ef4ff0f2658a3b74b4be2a01064b00c32ce9c49292a30651147782d7ecdf"
 
       define_method(:install) do
         bin.install "seedfast"
@@ -29,15 +29,15 @@ class Seedfast < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.3.0/seedfast_Linux_x86_64.tar.gz"
-      sha256 "4a12ad85f17e084566a6005fe1d0b239035301b0a190feb222849c1ccebaf6ab"
+      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_x86_64.tar.gz"
+      sha256 "61ebf37874597991d1a57effd7b11499b3446dea34819698ff5ab5b22527cd5d"
       define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argon-it/seedfast-cli/releases/download/v2.3.0/seedfast_Linux_arm64.tar.gz"
-      sha256 "15edcfc6bb34a43565d4b382bbbcf25bb6fc0ec7c48b9ccbeb253aae0afbdfb0"
+      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_arm64.tar.gz"
+      sha256 "22c160d0e6f181f473a10b91fc185c25d854b8ea34046a7bd35cc7a89bda77d5"
       define_method(:install) do
         bin.install "seedfast"
       end
