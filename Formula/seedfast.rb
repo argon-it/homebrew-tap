@@ -5,21 +5,21 @@
 class Seedfast < Formula
   desc "AI-powered PostgreSQL database seeding tool"
   homepage "https://seedfa.st"
-  version "2.3.1-rc1"
+  version "2.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_x86_64.tar.gz"
-      sha256 "5385dce4cc9f626648c455c740496d26640a159dba969060d43fbda508d5534a"
+      url "https://download.seedfa.st/seedfast/v2.3.1/seedfast_Darwin_x86_64.tar.gz"
+      sha256 "8d6dd0464f515ea68eb3633684ff7578013bc3726918ad2aa3a6880fe6592cb1"
 
       define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_arm64.tar.gz"
-      sha256 "6ac1c4469bef31a83fc09a9924c1524d2e470675108e8940ea53693b7b31e6cb"
+      url "https://download.seedfa.st/seedfast/v2.3.1/seedfast_Darwin_arm64.tar.gz"
+      sha256 "01647c35d3b5efedd4e915a69234486ac13a8a0e019264b1475901393979da2b"
 
       define_method(:install) do
         bin.install "seedfast"
@@ -29,15 +29,15 @@ class Seedfast < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_x86_64.tar.gz"
-      sha256 "dcdca3ba260c24fbfd394dd8922e6ccd91058451225cf499826081a98cde1a7a"
+      url "https://download.seedfa.st/seedfast/v2.3.1/seedfast_Linux_x86_64.tar.gz"
+      sha256 "8ad124fba92be826d44cd3f4554ec1af994af248eef162415e1fb2b8275d0c12"
       define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_arm64.tar.gz"
-      sha256 "4405576f6735d010e637be491a2a500206eb3d8fb2e204314adde66133567e37"
+      url "https://download.seedfa.st/seedfast/v2.3.1/seedfast_Linux_arm64.tar.gz"
+      sha256 "292694c7cbf38fc5abf5b7e8186b771f6ca8e1ed4010338564d004cba36b082f"
       define_method(:install) do
         bin.install "seedfast"
       end
