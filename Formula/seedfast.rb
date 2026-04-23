@@ -11,7 +11,7 @@ class Seedfast < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_x86_64.tar.gz"
-      sha256 "cad60b74886765675cdfb36fa61f9cb087a365f6547075a35e3f51a60fe1f684"
+      sha256 "5385dce4cc9f626648c455c740496d26640a159dba969060d43fbda508d5534a"
 
       define_method(:install) do
         bin.install "seedfast"
@@ -19,7 +19,7 @@ class Seedfast < Formula
     end
     if Hardware::CPU.arm?
       url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Darwin_arm64.tar.gz"
-      sha256 "c150eeca087a827f61afc1b405b22abaac1b3f3e6466710b7f70beacaddf59e9"
+      sha256 "6ac1c4469bef31a83fc09a9924c1524d2e470675108e8940ea53693b7b31e6cb"
 
       define_method(:install) do
         bin.install "seedfast"
@@ -30,14 +30,14 @@ class Seedfast < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_x86_64.tar.gz"
-      sha256 "8be643547d31b067bb933812a024fd299720fe389f62fb1e4657165cd764205f"
+      sha256 "dcdca3ba260c24fbfd394dd8922e6ccd91058451225cf499826081a98cde1a7a"
       define_method(:install) do
         bin.install "seedfast"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://download.seedfa.st/seedfast/v2.3.1-rc1/seedfast_Linux_arm64.tar.gz"
-      sha256 "7862387bc7a277933af533e6e8026d1c0cfa765f156dedf0b6311a29bd200d98"
+      sha256 "4405576f6735d010e637be491a2a500206eb3d8fb2e204314adde66133567e37"
       define_method(:install) do
         bin.install "seedfast"
       end
